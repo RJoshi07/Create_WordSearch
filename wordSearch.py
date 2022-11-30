@@ -66,6 +66,7 @@ def runGame(words):
         s += word + " "
     print(s)
 
+#can be used to find any word in the puzzle!! in the form (row, col) starting from 0
 def findWord(word, grid):
     for i in range (9):
         for j in range (9):
@@ -93,8 +94,7 @@ def getGridInput():
     grid = [list(word) for word in words]
     return grid
 
-grid = createGrid(['HELLO', 'RITIKA', 'DADA', 'MERLIN', 'GARLIC'])
+#input your words here!
+grid = createGrid(['THIS', 'IS', 'A', 'TEST', 'RUN'])
 printGrid(grid)
-print(findWord("HELLO", grid))
-
-#runGame(['HELLO', 'RITIKA', 'DADA', 'MERLIN', 'GARLIC'])
+print(findWord("TEST", grid))
